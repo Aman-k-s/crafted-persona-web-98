@@ -17,22 +17,20 @@ const Navigation = () => {
   const navItems = [
     { label: 'Home', href: '#' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
     { label: 'Contact', href: '#contact' }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-white'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <span className={`text-2xl font-bold ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              JD<span className="text-purple-600">.</span>
+            <span className="text-2xl font-bold text-gray-900">
+              Neway<span className="text-[#0772c8]">Solutions</span>
             </span>
           </div>
           
@@ -42,9 +40,7 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-purple-600 ${
-                    isScrolled ? 'text-gray-700' : 'text-white'
-                  }`}
+                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#0772c8] transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -55,9 +51,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-md ${
-                isScrolled ? 'text-gray-700 hover:text-purple-600' : 'text-white hover:text-purple-300'
-              }`}
+              className="p-2 rounded-md text-gray-700 hover:text-[#0772c8]"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -72,7 +66,7 @@ const Navigation = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 transition-colors duration-200"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#0772c8] transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
